@@ -8,6 +8,8 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
 
+  <link rel="stylesheet" href="./style.css">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -16,29 +18,106 @@
 </head>
 <body>
 
-  Bill
+  <div class="main">
+    <div id="content">
+      <div id="inputColumn">
+        <!-- Bill Section -->
+        <div class="bill">
+          <span class="ashText">
+            Bill <br>
+          </span>
+          <input type="number" step="0.01" name="billEntry" class="inputForm" placeholder="0">
+          
+          <!-- TO hide the arrow for number  -->
+          <style>
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            input[type=number] {
+              -moz-appearance: textfield;
+              /* Firefox */
+            }
+          </style>
+        </div>
+  
+        <!-- Select Tip Section -->
+        <div class="tip">
+          <span class="ashText">
+            Select Tip %
+          </span>
+          <div class="tipColumn">
+            <div class="tipPercent"> 5% </div>
+            <div class="tipPercent"> 10% </div>
+            <div class="tipPercent"> 15% </div>
+            <div class="tipPercent"> 25% </div>
+            <div class="tipPercent"> 50% </div>
+             
+              <input type="number" step="any" class="tipPercent customForm " placeholder="Custom">
+            
+              <!-- <div class="tipPercent custom">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+              </div> -->
+          </div>
+        </div>
+        
+        <!-- Choose No of People -->
+        <div class="numberPeople">
+          <span class="ashText">
+            Number of People <br>
+          </span>
+          <input type="number" step="1" name="numberPeople" class="inputForm" placeholder="0">
+        </div>
+      </div>
+  
+  
+      <!-- The Result Section -->
+      <div id="resultColumn">
+        <div class="amount" id="res">
+          <div class="txt">
+            <span class="resText">
+              Tip Total
+            </span> <br>
+            <span class="ashText">
+              / person
+            </span>
+          </div>
+          <div class="price">
+            $0.00
+          </div>
+        </div>
+      
+        <div class="total" id="res">
+          <div class="txt">
+            <span class="resText">
+              Total
+            </span> <br>
+            <span class="ashText">
+              / person
+            </span>
+          </div>
 
-  Number of People
+          <div class="price">
+            $0.00
+          </div>
 
-  Tip Amount
-  / person
+        </div>
+      
+        <button type="reset" class="resetBtn">RESET</button>
+      </div>
+    </div>
 
-  Total
-  / person
-
-  Reset
+  </div>
+  
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  
+  
+  
 </body>
 </html>
