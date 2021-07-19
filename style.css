@@ -74,9 +74,6 @@ body {
 
 }
 
-.attribution {
-
-}
 
 /* ===== SPLITTER TEXT ==== */
 .splitter {
@@ -140,6 +137,24 @@ body {
 
 /* ===== THE INPUT SECTION ===== */
 
+.inputTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.errorMsg {
+    background-color: hsl(0, 89%, 68%);
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    font-size: 12px;
+}
+
+.successMsg {
+    background-color: hsl(125, 89%, 68%);
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    font-size: 12px;
+}
 
 .bill > .inputForm {
     background-image: url(/images/icon-dollar.svg);
