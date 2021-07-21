@@ -99,6 +99,7 @@ body {
     border-radius: 10px;
     padding: 15px;
 
+    overflow: hidden;
     line-height: 30px;
 
     display: grid;
@@ -195,9 +196,6 @@ body {
     color: var(--dark-grayish-cyan) ;
     padding: none;
 }
-.numberPeople {
-
-}
 
 .numberPeople > .inputForm {
     background-image: url(/images/icon-person.svg);
@@ -213,16 +211,6 @@ body {
     justify-content: space-between;
 }
 
-.resultColumn {
-}
-
-.amount {
-    
-}
-
-.total {
-    
-}
 
 
 .resetBtn {
@@ -243,11 +231,13 @@ body {
     font-size: 35px;
     font-weight: var(--font-weight-L);
     color: var(--strong-cyan);
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 /* ===== Active States ===== */
 
-.tipPercent:active {
+.tipPercentSelected {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
 }
