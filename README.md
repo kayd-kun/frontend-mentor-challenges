@@ -1,4 +1,4 @@
-# Rrontend Mentor Challenges
+# Frontend Mentor Challenges
 
 This repository contains all the challenges that I did from the frontendmentor.io site
 
