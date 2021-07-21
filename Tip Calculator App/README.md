@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://flamboyant-darwin-90e2c0.netlify.app)
+- Live Site URL: [Hosted Using Netlify](https://flamboyant-darwin-90e2c0.netlify.app)
 
 ## My process
 
