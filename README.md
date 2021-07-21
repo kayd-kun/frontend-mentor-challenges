@@ -29,9 +29,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop Design](/screenshots/Screenshot Design Frontend Mentor Tip calculator app.png)
-![Desktip Design Full](/screenshots/Screenshot Complete Frontend Mentor Tip calculator app.png)
-![Mobile Version](screenshots/Screenshot Mobile Version Frontend Mentor Tip calculator app.png)
+![Desktop Design](./screenshots/Screenshot Design Frontend Mentor Tip calculator app.png)
+![Desktip Design Full](./screenshots/Screenshot Complete Frontend Mentor Tip calculator app.png)
+![Mobile Version](./screenshots/Screenshot Mobile Version Frontend Mentor Tip calculator app.png)
 
 ### Links
 
