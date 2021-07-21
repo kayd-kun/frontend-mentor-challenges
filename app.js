@@ -42,62 +42,57 @@ let customTF = true;
     } else {  // Error msg
         priceTF = false;
         alertMsg('fail', 'Positive number or decimal only', validInfo);
-
     }
-
    });
 
-    
-
-       tip.addEventListener('click', (event) => {
-           let child = event.target;
-           
-           // resetting the tip btn style
-            tipBtns.forEach((items)=>{
-                items.classList.remove('tipPercentSelected');
-            });
-
-           let value = parseInt(child.textContent);
-           if (value == 5) {
-               assignTipVariables(true, 5, child);
-            } else if (value == 10) {
-                assignTipVariables(true, 10, child);
-            } else if (value == 15) {
-                assignTipVariables(true, 15, child);
-            } else if (value == 25) {
-                assignTipVariables(true, 25, child);
-            } else if (value == 50) {
-                assignTipVariables(true, 50, child);
-            } else {
-                assignTipVariables(false, 0, null);
-            }
-            alertMsg('success', `${value}% Selected`, validCustom);
-        });
+    tip.addEventListener('click', (event) => {
+        let child = event.target;
         
-        function assignTipVariables(tf, value, element) {
-            tipBtnTF = tf;
-            customTF = false;
-            tipValue = value;
-            element.classList.add('tipPercentSelected');
+        // resetting the tip btn style
+        tipBtns.forEach((items)=>{
+            items.classList.remove('tipPercentSelected');
+        });
+
+        let value = parseInt(child.textContent);
+        if (value == 5) {
+            assignTipVariables(true, 5, child);
+        } else if (value == 10) {
+            assignTipVariables(true, 10, child);
+        } else if (value == 15) {
+            assignTipVariables(true, 15, child);
+        } else if (value == 25) {
+            assignTipVariables(true, 25, child);
+        } else if (value == 50) {
+            assignTipVariables(true, 50, child);
+        } else {
+            assignTipVariables(false, 0, null);
         }
+        alertMsg('success', `${value}% Selected`, validCustom);
+    });
         
-        customTip.addEventListener('keyup', ()=>{
-            let customTipValue = customTip.value;
-            let regexCustomTip = /^[+]?([0-9]+(?:[\.][0-9]*)?|\.[0-9]+)$/
-            let isCustomTipValid = regexCustomTip.test(customTipValue);
-            
-            if (isCustomTipValid) {
-                customTF = true;
-                tipBtnTF = false;
-                tipValue = customTipValue;     
-                alertMsg('success', 'Tip Valid', validCustom);
-            } else {  // Error msg
-                tipValue = 0;
-                alertMsg('fail', '% in Numbers only', validCustom);
-            }
-        });
+    function assignTipVariables(tf, value, element) {
+        tipBtnTF = tf;
+        customTF = false;
+        tipValue = value;
+        element.classList.add('tipPercentSelected');
+    }
     
-   
+    customTip.addEventListener('keyup', ()=>{
+        let customTipValue = customTip.value;
+        let regexCustomTip = /^[+]?([0-9]+(?:[\.][0-9]*)?|\.[0-9]+)$/
+        let isCustomTipValid = regexCustomTip.test(customTipValue);
+        
+        if (isCustomTipValid) {
+            customTF = true;
+            tipBtnTF = false;
+            tipValue = customTipValue;     
+            alertMsg('success', 'Tip Valid', validCustom);
+        } else {  // Error msg
+            tipValue = 0;
+            alertMsg('fail', '% in Numbers only', validCustom);
+        }
+    });
+    
    inputPeople.addEventListener('keyup', ()=> { 
     let people = inputPeople.value;
     let regexInputPeople = /^[1-9]\d*$/
@@ -119,10 +114,9 @@ let customTF = true;
     resetValues();
    });
 
-
-
-
-
+   window.addEventListener('load', ()=>{
+       resetValues();
+   })
 
    
 /* ===================== Functions ============================== */
@@ -142,23 +136,22 @@ function alertMsg (status, message, element){
         element.textContent = `${message}`;
     }
 
-/* Testing  */
-console.log("Price Bool: " + priceTF);
-console.log("TipBtn Bool: " + tipBtnTF);
-console.log("Custom Bool: " + customTF);
-console.log("People Bool: " + peopleTF);
-console.log();
+    /* Testing  
+    console.log("Price Bool: " + priceTF);
+    console.log("TipBtn Bool: " + tipBtnTF);
+    console.log("Custom Bool: " + customTF);
+    console.log("People Bool: " + peopleTF);
+    console.log(); */
 
 
-/* To Invoke the call  to calculate*/
-if (priceTF == true && tipBtnTF == true && customTF == false && peopleTF == true) {
-    calculateTip(priceVal, tipValue, peopleVal);
-    console.log("With tip btn invoked");
-} else if (priceTF == true && tipBtnTF == false && customTF == true && peopleTF == true) {
-    calculateTip(priceVal, tipValue, peopleVal);
-    console.log("With custom tip invoked");
-}
-
+    /* To Invoke the call  to calculate*/
+    if (priceTF == true && tipBtnTF == true && customTF == false && peopleTF == true) {
+        calculateTip(priceVal, tipValue, peopleVal);
+        console.log("With tip btn invoked");
+    } else if (priceTF == true && tipBtnTF == false && customTF == true && peopleTF == true) {
+        calculateTip(priceVal, tipValue, peopleVal);
+        console.log("With custom tip invoked");
+    }
 }
 
 // Calculating the tip
@@ -184,10 +177,7 @@ function calculateTip(price, interest, people) {
         console.log(typeof(price));
         console.log(typeof(interest));
         console.log(typeof(people));
-        
     }
-
-
 
     tipTotalAmount.textContent = `$${tipTotal.toFixed(2)}`;
     totalAmount.textContent = `$${total.toFixed(2)}`;
@@ -204,7 +194,7 @@ function resetValues() {
         item.classList.remove('errorMsg');
         item.classList.remove('successMsg');
         item.textContent = "";
-    })
+    });
 }
 
 
