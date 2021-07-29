@@ -1,0 +1,123 @@
+:root {
+  /* Colors */
+  --Bright-Ornage: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-grey: hsl(0, 0%, 95%);
+
+  /* Font */
+  --font-size: 15px;
+  /* 
+    Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+    Weights: 400
+
+    Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+    Weights: 700
+*/
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 1. General Layout */
+
+.content {
+  display: grid;
+  margin: 20px;
+}
+
+.eachDiv {
+  padding: 50px;
+  height: auto;
+}
+
+/* 2. Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+h1 {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--Very-light-grey);
+}
+
+p {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--Transparent-white);
+  line-height: 1.9rem;
+  font-size: 15px;
+}
+
+/* 3. Each Divs */
+
+.sedan {
+  border-radius: 10px 10px 0 0;
+  background-color: var(--Bright-Ornage);
+}
+
+.suvs {
+  background-color: var(--Dark-cyan);
+}
+
+.luxury {
+  border-radius: 0 0 10px 10px;
+  background-color: var(--Very-dark-cyan);
+}
+
+/* Specifics */
+
+img {
+  margin-top: 25px;
+}
+
+.learnMore {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 150px;
+  border-radius: 50px;
+
+  background-color: white;
+  border: 1px solid white;
+
+  font-weight: 700;
+  color: #000;
+  mix-blend-mode: screen;
+}
+
+.learnMore:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.title {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 800px) {
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    height: 60vh;
+  }
+  .content {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70%;
+    height: 100%;
+  }
+
+  .sedan {
+    border-radius: 10px 0 0 10px;
+  }
+  .luxury {
+    border-radius: 0 10px 10px 0;
+  }
+}
