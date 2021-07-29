@@ -1,0 +1,155 @@
+:root {
+  /* SET UP */
+
+  /* PRIMARY colors */
+  --Light-red: hsl(356, 100%, 66%);
+  --Very-light-red: hsl(355, 100%, 74%);
+  --Very-dark-blue: hsl(208, 49%, 24%);
+  /* NEUTRAL */
+  --White-text: hsl(0, 0%, 100%);
+  --Grayish-blue: hsl(240, 2%, 79%);
+  --Very-dark-grayish-blue: hsl(207, 13%, 34%);
+  --Very-dark-black-blue: hsl(240, 10%, 16%);
+  /* GRADIENT Color */
+  --Gradient-Very-light-red: hsl(13, 100%, 72%);
+  --Gradient-Light-red: hsl(353, 100%, 62%);
+
+  /* Fonts */
+  --family-Overpass: "Overpass", sans-serif;
+  --family-Ubuntu: "Ubuntu", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+/* GENERAL LAYOUT  */
+.main {
+  width: 500px;
+  margin: auto;
+}
+
+/* .intro,
+.text,
+.infrastructure,
+.beforeFooter,
+.fotter {
+  height: 500px;
+} */
+
+/* General Style */
+h1 {
+  font-family: var(--family-Ubuntu);
+  font-weight: 600;
+}
+p {
+  font-size: 16px;
+  font-family: var(--family-Overpass);
+  font-weight: 400;
+}
+
+/* SPECIFIC  INTRO */
+
+.intro {
+  padding: 30px;
+  width: 100%;
+  background-color: var(--Very-light-red);
+  border-radius: 0 0 0 80px;
+  color: white;
+  /* overflow: hidden; */
+  /* background-image: url(./images/bg-pattern-intro.svg); */
+}
+
+.text,
+.beforeFooter {
+  padding: 10px;
+  color: var(--Very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 1000px; */
+}
+
+.infrastructure {
+  background-color: var(--Very-dark-blue);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0 150px 0 150px;
+}
+
+.beforeFooter {
+  gap: 50px;
+}
+
+.fotter {
+  text-align: center;
+  background-color: var(--Very-dark-black-blue);
+}
+
+/* Specific INTRO DIV*/
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-content {
+  text-align: center;
+}
+
+.intro-content h1 {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.btn-container {
+  margin-top: 30px;
+}
+
+.btn-container button {
+  width: 120px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 40px;
+}
+
+.btn-1 {
+  background-color: white;
+  margin: 0 40px 0 0;
+}
+
+.btn-2 {
+  background-color: transparent;
+  margin: 0 0 0 40px;
+}
+
+.svgIntro {
+  width: 1000px;
+  position: relative;
+  right: 60%;
+  bottom: 30%;
+}
+
+/* SPECIFIC TEXT DIV */
+
+.text h1 {
+  font-weight: 400;
+  text-align: center;
+  margin: 50px 0 50px 0;
+}
+
+/* SPECIFIV INFRASTRUCTURE DIV */
+.infrastructure h1 {
+  margin: 20px 0 30px 0;
+}
+
+.infrastructure p {
+  margin-bottom: 50px;
+}
+
+/* SPECIFIC LAST TEXT DIV */
