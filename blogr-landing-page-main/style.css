@@ -30,7 +30,7 @@
 
 /* GENERAL LAYOUT  */
 .main {
-  width: 500px;
+  width: 100%;
   margin: auto;
 }
 
@@ -226,4 +226,62 @@ p {
 .fotter h3 {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .hide-modal {
+    display: block;
+  }
+
+  .inside-modal {
+    display: none;
+  }
+
+  .into-menu-modal,
+  .menu {
+    display: inline;
+  }
+
+  .menu {
+    width: 100px;
+  }
+
+  /* Making list horizontal */
+
+  .into-menu-modal {
+    width: 100px;
+    display: table;
+    margin: 0 auto;
+  }
+
+  ul.menu-list {
+    min-width: 696px;
+    padding-top: 20px;
+  }
+
+  ul.menu-list li {
+    display: inline;
+  }
+  /* 
+  .menu li {
+    display: inline;
+  } */
+
+  .into-menu-modal,
+  .inside-modal {
+    background-color: transparent;
+    border-width: 0;
+    box-shadow: none;
+  }
+
+  .menu-list {
+    list-style-type: none;
+  }
+
+  .inside-modal {
+  }
 }
