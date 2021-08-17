@@ -6,12 +6,16 @@ Challenges
 
 1. Tip Calculator App (Junior)
 
-- [live site url]: (https://flamboyant-darwin-90e2c0.netlify.app)
+   - [Live Site URL] : (https://flamboyant-darwin-90e2c0.netlify.app)
 
 2. 3 Column Layout App (Newbie)
 
-- [live site url]: (https://tender-babbage-022e8d.netlify.app/)
+   - [Live Site URL] : (https://tender-babbage-022e8d.netlify.app/)
 
-3. stats preview card component
+3. Blogr-landing-page (Junior)
 
-- [Live Site URL] : (https://suspicious-kirch-0430c6.netlify.app/)
+   - Got stuck trying to make it responsive
+   - Will come back to it another time
+
+4. stats preview card component (Newbie)
+   - [Live Site URL] : (https://suspicious-kirch-0430c6.netlify.app/)
